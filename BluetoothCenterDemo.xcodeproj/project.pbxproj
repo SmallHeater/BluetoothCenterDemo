@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62CBC33A1FDA8EFF002C3B7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC3391FDA8EFF002C3B7F /* AppDelegate.m */; };
+		62CBC3401FDA8EFF002C3B7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CBC33E1FDA8EFF002C3B7F /* Main.storyboard */; };
+		62CBC3421FDA8EFF002C3B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62CBC3411FDA8EFF002C3B7F /* Assets.xcassets */; };
+		62CBC3451FDA8EFF002C3B7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CBC3431FDA8EFF002C3B7F /* LaunchScreen.storyboard */; };
+		62CBC3481FDA8EFF002C3B7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC3471FDA8EFF002C3B7F /* main.m */; };
+		62CBC3681FDA8FA2002C3B7F /* BloothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC3511FDA8FA2002C3B7F /* BloothCell.m */; };
+		62CBC3691FDA8FA2002C3B7F /* BloothModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC3541FDA8FA2002C3B7F /* BloothModel.m */; };
+		62CBC36A1FDA8FA2002C3B7F /* CustomizedNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC3581FDA8FA2002C3B7F /* CustomizedNavigationBar.m */; };
+		62CBC36B1FDA8FA2002C3B7F /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC35B1FDA8FA2002C3B7F /* BaseNavViewController.m */; };
+		62CBC36C1FDA8FA2002C3B7F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC35D1FDA8FA2002C3B7F /* BaseViewController.m */; };
+		62CBC36D1FDA8FA2002C3B7F /* BloothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC3601FDA8FA2002C3B7F /* BloothManager.m */; };
+		62CBC36E1FDA8FA2002C3B7F /* BloothTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC3631FDA8FA2002C3B7F /* BloothTableViewVC.m */; };
+		62CBC36F1FDA8FA2002C3B7F /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC3651FDA8FA2002C3B7F /* ChatViewController.m */; };
+		62CBC3701FDA8FA2002C3B7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBC3671FDA8FA2002C3B7F /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		62CBC3351FDA8EFF002C3B7F /* BluetoothCenterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothCenterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62CBC3381FDA8EFF002C3B7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		62CBC3391FDA8EFF002C3B7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		62CBC33F1FDA8EFF002C3B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62CBC3411FDA8EFF002C3B7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62CBC3441FDA8EFF002C3B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		62CBC3461FDA8EFF002C3B7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62CBC3471FDA8EFF002C3B7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62CBC34E1FDA8F57002C3B7F /* BluetoothCenterDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothCenterDemo.pch; sourceTree = "<group>"; };
+		62CBC3501FDA8FA2002C3B7F /* BloothCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloothCell.h; sourceTree = "<group>"; };
+		62CBC3511FDA8FA2002C3B7F /* BloothCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloothCell.m; sourceTree = "<group>"; };
+		62CBC3531FDA8FA2002C3B7F /* BloothModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloothModel.h; sourceTree = "<group>"; };
+		62CBC3541FDA8FA2002C3B7F /* BloothModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloothModel.m; sourceTree = "<group>"; };
+		62CBC3571FDA8FA2002C3B7F /* CustomizedNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizedNavigationBar.h; sourceTree = "<group>"; };
+		62CBC3581FDA8FA2002C3B7F /* CustomizedNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizedNavigationBar.m; sourceTree = "<group>"; };
+		62CBC35A1FDA8FA2002C3B7F /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
+		62CBC35B1FDA8FA2002C3B7F /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
+		62CBC35C1FDA8FA2002C3B7F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		62CBC35D1FDA8FA2002C3B7F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		62CBC35F1FDA8FA2002C3B7F /* BloothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloothManager.h; sourceTree = "<group>"; };
+		62CBC3601FDA8FA2002C3B7F /* BloothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloothManager.m; sourceTree = "<group>"; };
+		62CBC3621FDA8FA2002C3B7F /* BloothTableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloothTableViewVC.h; sourceTree = "<group>"; };
+		62CBC3631FDA8FA2002C3B7F /* BloothTableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloothTableViewVC.m; sourceTree = "<group>"; };
+		62CBC3641FDA8FA2002C3B7F /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		62CBC3651FDA8FA2002C3B7F /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		62CBC3661FDA8FA2002C3B7F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		62CBC3671FDA8FA2002C3B7F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62CBC3321FDA8EFF002C3B7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62CBC32C1FDA8EFF002C3B7F = {
+			isa = PBXGroup;
+			children = (
+				62CBC3371FDA8EFF002C3B7F /* BluetoothCenterDemo */,
+				62CBC3361FDA8EFF002C3B7F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62CBC3361FDA8EFF002C3B7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62CBC3351FDA8EFF002C3B7F /* BluetoothCenterDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62CBC3371FDA8EFF002C3B7F /* BluetoothCenterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				62CBC3551FDA8FA2002C3B7F /* Base */,
+				62CBC34F1FDA8FA2002C3B7F /* Cell */,
+				62CBC35E1FDA8FA2002C3B7F /* Controller */,
+				62CBC3521FDA8FA2002C3B7F /* Model */,
+				62CBC3611FDA8FA2002C3B7F /* UIViewController */,
+				62CBC3381FDA8EFF002C3B7F /* AppDelegate.h */,
+				62CBC3391FDA8EFF002C3B7F /* AppDelegate.m */,
+				62CBC33E1FDA8EFF002C3B7F /* Main.storyboard */,
+				62CBC3411FDA8EFF002C3B7F /* Assets.xcassets */,
+				62CBC3431FDA8EFF002C3B7F /* LaunchScreen.storyboard */,
+				62CBC3461FDA8EFF002C3B7F /* Info.plist */,
+				62CBC3471FDA8EFF002C3B7F /* main.m */,
+				62CBC34E1FDA8F57002C3B7F /* BluetoothCenterDemo.pch */,
+			);
+			path = BluetoothCenterDemo;
+			sourceTree = "<group>";
+		};
+		62CBC34F1FDA8FA2002C3B7F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				62CBC3501FDA8FA2002C3B7F /* BloothCell.h */,
+				62CBC3511FDA8FA2002C3B7F /* BloothCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		62CBC3521FDA8FA2002C3B7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62CBC3531FDA8FA2002C3B7F /* BloothModel.h */,
+				62CBC3541FDA8FA2002C3B7F /* BloothModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		62CBC3551FDA8FA2002C3B7F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				62CBC3561FDA8FA2002C3B7F /* BaseView */,
+				62CBC3591FDA8FA2002C3B7F /* BaseViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		62CBC3561FDA8FA2002C3B7F /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				62CBC3571FDA8FA2002C3B7F /* CustomizedNavigationBar.h */,
+				62CBC3581FDA8FA2002C3B7F /* CustomizedNavigationBar.m */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		62CBC3591FDA8FA2002C3B7F /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				62CBC35A1FDA8FA2002C3B7F /* BaseNavViewController.h */,
+				62CBC35B1FDA8FA2002C3B7F /* BaseNavViewController.m */,
+				62CBC35C1FDA8FA2002C3B7F /* BaseViewController.h */,
+				62CBC35D1FDA8FA2002C3B7F /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		62CBC35E1FDA8FA2002C3B7F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				62CBC35F1FDA8FA2002C3B7F /* BloothManager.h */,
+				62CBC3601FDA8FA2002C3B7F /* BloothManager.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		62CBC3611FDA8FA2002C3B7F /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				62CBC3621FDA8FA2002C3B7F /* BloothTableViewVC.h */,
+				62CBC3631FDA8FA2002C3B7F /* BloothTableViewVC.m */,
+				62CBC3641FDA8FA2002C3B7F /* ChatViewController.h */,
+				62CBC3651FDA8FA2002C3B7F /* ChatViewController.m */,
+				62CBC3661FDA8FA2002C3B7F /* ViewController.h */,
+				62CBC3671FDA8FA2002C3B7F /* ViewController.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62CBC3341FDA8EFF002C3B7F /* BluetoothCenterDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62CBC34B1FDA8EFF002C3B7F /* Build configuration list for PBXNativeTarget "BluetoothCenterDemo" */;
+			buildPhases = (
+				62CBC3311FDA8EFF002C3B7F /* Sources */,
+				62CBC3321FDA8EFF002C3B7F /* Frameworks */,
+				62CBC3331FDA8EFF002C3B7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BluetoothCenterDemo;
+			productName = BluetoothCenterDemo;
+			productReference = 62CBC3351FDA8EFF002C3B7F /* BluetoothCenterDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62CBC32D1FDA8EFF002C3B7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = xianjunwang;
+				TargetAttributes = {
+					62CBC3341FDA8EFF002C3B7F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 62CBC3301FDA8EFF002C3B7F /* Build configuration list for PBXProject "BluetoothCenterDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62CBC32C1FDA8EFF002C3B7F;
+			productRefGroup = 62CBC3361FDA8EFF002C3B7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62CBC3341FDA8EFF002C3B7F /* BluetoothCenterDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62CBC3331FDA8EFF002C3B7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CBC3451FDA8EFF002C3B7F /* LaunchScreen.storyboard in Resources */,
+				62CBC3421FDA8EFF002C3B7F /* Assets.xcassets in Resources */,
+				62CBC3401FDA8EFF002C3B7F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62CBC3311FDA8EFF002C3B7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CBC3681FDA8FA2002C3B7F /* BloothCell.m in Sources */,
+				62CBC36A1FDA8FA2002C3B7F /* CustomizedNavigationBar.m in Sources */,
+				62CBC36F1FDA8FA2002C3B7F /* ChatViewController.m in Sources */,
+				62CBC3691FDA8FA2002C3B7F /* BloothModel.m in Sources */,
+				62CBC3481FDA8EFF002C3B7F /* main.m in Sources */,
+				62CBC3701FDA8FA2002C3B7F /* ViewController.m in Sources */,
+				62CBC33A1FDA8EFF002C3B7F /* AppDelegate.m in Sources */,
+				62CBC36D1FDA8FA2002C3B7F /* BloothManager.m in Sources */,
+				62CBC36C1FDA8FA2002C3B7F /* BaseViewController.m in Sources */,
+				62CBC36E1FDA8FA2002C3B7F /* BloothTableViewVC.m in Sources */,
+				62CBC36B1FDA8FA2002C3B7F /* BaseNavViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		62CBC33E1FDA8EFF002C3B7F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62CBC33F1FDA8EFF002C3B7F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		62CBC3431FDA8EFF002C3B7F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62CBC3441FDA8EFF002C3B7F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62CBC3491FDA8EFF002C3B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		62CBC34A1FDA8EFF002C3B7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62CBC34C1FDA8EFF002C3B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TDT34TC7ER;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BluetoothCenterDemo/BluetoothCenterDemo.pch";
+				INFOPLIST_FILE = BluetoothCenterDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.BluetoothCenterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62CBC34D1FDA8EFF002C3B7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TDT34TC7ER;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BluetoothCenterDemo/BluetoothCenterDemo.pch";
+				INFOPLIST_FILE = BluetoothCenterDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.BluetoothCenterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62CBC3301FDA8EFF002C3B7F /* Build configuration list for PBXProject "BluetoothCenterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CBC3491FDA8EFF002C3B7F /* Debug */,
+				62CBC34A1FDA8EFF002C3B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62CBC34B1FDA8EFF002C3B7F /* Build configuration list for PBXNativeTarget "BluetoothCenterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CBC34C1FDA8EFF002C3B7F /* Debug */,
+				62CBC34D1FDA8EFF002C3B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62CBC32D1FDA8EFF002C3B7F /* Project object */;
+}
