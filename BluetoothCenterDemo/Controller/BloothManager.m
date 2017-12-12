@@ -14,6 +14,7 @@
 @interface BloothManager ()<CBCentralManagerDelegate,CBPeripheralDelegate>
 //中心设备
 @property (nonatomic, strong) CBCentralManager *centralManager;
+//CBCentral
 //正在连接的设备模型
 @property (nonatomic,strong) BloothModel * connectingModel;
 @property (nonatomic,strong) NSString * serviceUUID;
@@ -189,10 +190,14 @@
     
     if (self.serviceUUID && self.serviceUUID.length > 0) {
         
-        // 这里仅有一个服务，所以直接获取
-        CBService *service = peripheral.services.lastObject;
-        // 根据UUID寻找服务中的特征
-        [peripheral discoverCharacteristics:@[[CBUUID UUIDWithString:CHARACTERISTIC_UUID]] forService:service];
+        if (peripheral.services.count > 0) {
+            
+            CBService *service = peripheral.services.lastObject;
+            // 根据UUID寻找服务中的特征
+            //[peripheral discoverCharacteristics:@[[CBUUID UUIDWithString:CHARACTERISTIC_UUID]] forService:service];
+            // 寻找服务中的所有特征
+            [peripheral discoverCharacteristics:nil forService:service];
+        }
     }
     else{
         
@@ -204,24 +209,47 @@
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
     
     // 遍历出所需要的特征
-    for (CBCharacteristic *characteristic in service.characteristics) {
-        NSLog(@"所有特征：%@", characteristic);
+    for (NSUInteger i = 0 ; i < service.characteristics.count; i++) {
+        
+        // 这里只获取一个特征，写入数据的时候需要用到这个特征
+        switch (i) {
+            case 0:
+            {
+                self.characteristic2 = service.characteristics[0];
+                // 直接读取这个特征数据，会调用didUpdateValueForCharacteristic
+                [peripheral readValueForCharacteristic:self.characteristic2];
+                // 订阅通知(如果外设特征没有CBCharacteristicPropertyNotify，订阅会失败)
+                [peripheral setNotifyValue:YES forCharacteristic:self.characteristic2];
+               break;
+            }
+            case 1:
+            {
+                self.characteristic3 = service.characteristics[1];
+                // 直接读取这个特征数据，会调用didUpdateValueForCharacteristic
+                [peripheral readValueForCharacteristic:self.characteristic3];
+                // 订阅通知
+                [peripheral setNotifyValue:YES forCharacteristic:self.characteristic3];
+                break;
+            }
+            case 2:
+            {
+                self.characteristic4 = service.characteristics[2];
+                // 直接读取这个特征数据，会调用didUpdateValueForCharacteristic
+                [peripheral readValueForCharacteristic:self.characteristic4];
+                // 订阅通知
+                [peripheral setNotifyValue:YES forCharacteristic:self.characteristic4];
+                break;
+            }
+                
+            default:
+                break;
+        }
+
+        NSLog(@"所有特征：%@", service.characteristics[i]);
         // 从外设开发人员那里拿到不同特征的UUID，不同特征做不同事情，比如有读取数据的特征，也有写入数据的特征
     }
     
-    if (self.serviceUUID && self.serviceUUID.length > 0) {
-        
-        // 这里只获取一个特征，写入数据的时候需要用到这个特征
-        self.characteristic = service.characteristics.lastObject;
-        // 直接读取这个特征数据，会调用didUpdateValueForCharacteristic
-        [peripheral readValueForCharacteristic:self.characteristic];
-        // 订阅通知
-        [peripheral setNotifyValue:YES forCharacteristic:self.characteristic];
-    }
-    else{
-        
-        
-    }
+   
 }
 
 //订阅状态的改变
@@ -237,26 +265,23 @@
     }
 }
 
-//接收到数据回调
+//接收到数据回调（很快）
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     
+    NSLog(@"接收到数据回调");
     if (self.delegate) {
         
         [self.delegate peripheral:peripheral didUpdateValueForCharacteristic:characteristic error:error];
     }
 }
 
-//写入数据回调
+//写入数据回调（大概会延时3秒）（如果连续多次往外设写入数据，即使多次执行了写入操作，但实际需要每一次的写入操作执行了写入回调之后才会真正执行下一次写入，感觉有点队列，单通道性质）
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(nonnull CBCharacteristic *)characteristic error:(nullable NSError *)error {
     
-    if (error) {
-        
-        NSLog(@"写入失败");
-    }
-    else{
+   
      
-        NSLog(@"写入成功");
-    }
+    NSLog(@"写入数据回调");
+    
     if (self.delegate) {
         
         [self.delegate peripheral:peripheral didWriteValueForCharacteristic:characteristic error:error];

@@ -30,14 +30,18 @@
 @property (nonatomic,strong) NSMutableArray * bloothModelArray;
 //外设
 @property (nonatomic, strong) CBPeripheral *peripheral;
-//特征
-@property (nonatomic, strong) CBCharacteristic *characteristic;
+//特征2
+@property (nonatomic, strong) CBCharacteristic *characteristic2;
+//特征3
+@property (nonatomic, strong) CBCharacteristic *characteristic3;
+//特征4
+@property (nonatomic, strong) CBCharacteristic *characteristic4;
 //代理
 @property (nonatomic,weak) id<BloothManagerDelegate>delegate;
 
 //开始扫描
 -(void)startScan;
-//开始扫描
+//开始扫描特定 UUID 设备
 -(void)startScanWithServiceUUID:(NSString *)serviceUUID;
 //停止扫描
 -(void)stopScan;

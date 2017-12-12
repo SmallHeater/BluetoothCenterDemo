@@ -10,7 +10,10 @@
 #import "BloothManager.h"
 
 
-@interface ChatViewController ()<UITextFieldDelegate,BloothManagerDelegate>
+@interface ChatViewController ()<UITextFieldDelegate,BloothManagerDelegate>{
+    
+    NSUInteger integer;
+}
 //状态label
 @property (nonatomic,strong) UILabel * stateLabel;
 //扫描外设按钮
@@ -30,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    integer = 0;
     self.navigationBar.titleLabel.text = @"蓝牙聊天";
     [self.view addSubview:self.stateLabel];
     [self.view addSubview:self.scanBtn];
@@ -84,14 +88,8 @@
 //写入数据回调
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(nonnull CBCharacteristic *)characteristic error:(nullable NSError *)error{
     
-    if (error) {
-        
-    }
-    else{
-        
         //写入成功
         self.textField.text = @"";
-    }
 }
 
 #pragma mark  ----  自定义函数
@@ -106,9 +104,34 @@
 -(void)sendBtnClicked:(UIButton *)btn{
     
     // 用NSData类型来写入
-    NSData *data = [self.textField.text dataUsingEncoding:NSUTF8StringEncoding];
-    // 根据上面的特征self.characteristic来写入数据
-   /[[BloothManager sharedManager].peripheral writeValue:data forCharacteristic:[BloothManager sharedManager].characteristic type:CBCharacteristicWriteWithResponse];
+    NSString * id = [self getOnlyID];
+    NSDictionary * dic = [[NSDictionary alloc] initWithObjectsAndKeys:id,@"id",self.textField.text,@"value", nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+    NSLog(@"写入：%@",dic[@"value"]);
+    
+    switch (integer % 3) {
+        case 0:
+            // 根据上面的特征来写入数据
+            [[BloothManager sharedManager].peripheral writeValue:data forCharacteristic:[BloothManager sharedManager].characteristic2 type:CBCharacteristicWriteWithResponse];
+            break;
+        case 1:
+            [[BloothManager sharedManager].peripheral writeValue:data forCharacteristic:[BloothManager sharedManager].characteristic3 type:CBCharacteristicWriteWithResponse];
+            break;
+        case 2:
+            [[BloothManager sharedManager].peripheral writeValue:data forCharacteristic:[BloothManager sharedManager].characteristic4 type:CBCharacteristicWriteWithResponse];
+            break;
+        default:
+            break;
+    }
+    
+    
+}
+
+//唯一字符串
+-(NSString *)getOnlyID{
+    
+    NSString * uuidStr = [[NSUUID UUID] UUIDString];
+    return uuidStr;
 }
 
 #pragma mark  ----  懒加载
@@ -126,10 +149,11 @@
     
     if (!_scanBtn) {
         
-        _scanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _scanBtn.frame = CGRectMake(0, SCREENHEIGHT - 40, SCREENWIDTH, 40);
+        _scanBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        _scanBtn.frame = CGRectMake(0, SCREENHEIGHT - 60, SCREENWIDTH, 40);
         [_scanBtn setTitle:@"扫描外设" forState:UIControlStateNormal];
         [_scanBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_scanBtn setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
         [_scanBtn addTarget:self action:@selector(scanBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _scanBtn;
@@ -155,6 +179,7 @@
         _sendBtn.frame = CGRectMake(CGRectGetMaxX(self.textField.frame) + 5, CGRectGetMinY(self.textField.frame), 40, 40);
         [_sendBtn setTitle:@"发送" forState:UIControlStateNormal];
         [_sendBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_sendBtn setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
         [_sendBtn addTarget:self action:@selector(sendBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _sendBtn;
