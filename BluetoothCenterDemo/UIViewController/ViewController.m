@@ -9,7 +9,10 @@
 #import "ViewController.h"
 #import "BloothTableViewVC.h"
 #import "ChatViewController.h"
-#import "ChatViewController.h"
+#import <CoreTelephony/CTCallCenter.h>
+
+//引入框架
+@import CoreTelephony;
 
 @interface ViewController ()
 
@@ -17,7 +20,7 @@
 @property (nonatomic,strong) UIButton * firstBtn;
 //去蓝牙设备列表页按钮
 @property (nonatomic,strong) UIButton * secondBtn;
-
+@property (nonatomic, strong) CTCallCenter * center;
 
 @end
 
@@ -29,7 +32,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationBar.titleLabel.text = @"中心设备工程";
-    
+    self.center = [[CTCallCenter alloc] init];
+    self.center.callEventHandler = ^(CTCall* call) {
+        if ([call.callState isEqualToString:CTCallStateDisconnected])
+        {
+            NSLog(@"挂断了电话咯Call has been disconnected");
+        }
+        else if ([call.callState isEqualToString:CTCallStateConnected])
+        {
+            NSLog(@"电话通了Call has just been connected");
+        }
+        else if([call.callState isEqualToString:CTCallStateIncoming])
+        {
+            NSLog(@"来电话了Call is incoming");
+            
+        }
+        else if ([call.callState isEqualToString:CTCallStateDialing])
+        {
+            NSLog(@"正在播出电话call is dialing");
+        }
+        else
+        {
+            NSLog(@"嘛都没做Nothing is done");
+        }
+    };
     
     [self.view addSubview:self.firstBtn];
     [self.view addSubview:self.secondBtn];

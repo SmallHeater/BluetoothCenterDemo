@@ -24,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62B364871FDFE4CC009CD90F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		62CBC3351FDA8EFF002C3B7F /* BluetoothCenterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothCenterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62CBC3381FDA8EFF002C3B7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		62CBC3391FDA8EFF002C3B7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,11 +65,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62B364861FDFE4CC009CD90F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62B364871FDFE4CC009CD90F /* CoreTelephony.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		62CBC32C1FDA8EFF002C3B7F = {
 			isa = PBXGroup;
 			children = (
 				62CBC3371FDA8EFF002C3B7F /* BluetoothCenterDemo */,
 				62CBC3361FDA8EFF002C3B7F /* Products */,
+				62B364861FDFE4CC009CD90F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
